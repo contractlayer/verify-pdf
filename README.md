@@ -208,6 +208,16 @@ signers = [s["signer"]["name"] for s in result["signatures"]]
 return f"APPROVED: Signed by {', '.join(signers)}"
 ```
 
+### From an MCP client (Claude, ChatGPT, Cursor, …)
+
+The same check is the `verify_pdf` tool of the eContract MCP server, so an assistant can verify a PDF the user attaches without any code:
+
+```text
+https://api.econtract.online/mcp
+```
+
+Setup for each client: [contractlayer/contractlayer → mcp](https://github.com/contractlayer/contractlayer/tree/main/mcp). `verify_pdf` needs no special permission; the other tools (send a contract, track signatures, download the signed PDF) need an eContract account.
+
 **Use cases for AI agents:**
 - Contract review automation — verify before analyzing content
 - CRM integrations — auto-validate incoming signed documents
@@ -295,9 +305,8 @@ In the meantime, use the free hosted API at `api.econtract.online`.
 
 | Project | Description |
 |---------|-------------|
-| [contractlayer](https://github.com/contractlayer/contractlayer) | ContractLayer organization overview |
-| [contract-manager](https://github.com/contractlayer/contract-manager) | Create, manage, and sign contracts |
-| [risk-check](https://github.com/contractlayer/risk-check) | AI-powered contract risk analysis |
+| [contractlayer](https://github.com/contractlayer/contractlayer) | The eContract MCP server and a config for every AI client |
+| [contract-manager](https://github.com/contractlayer/contract-manager) | Send contracts for e-signature with the REST API (Node.js, Python) |
 
 ---
 
