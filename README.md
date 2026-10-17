@@ -216,7 +216,7 @@ The same check is the `verify_pdf` tool of the eContract MCP server, so an assis
 https://api.econtract.online/mcp
 ```
 
-Setup for each client: [contractlayer/contractlayer → mcp](https://github.com/contractlayer/contractlayer/tree/main/mcp). `verify_pdf` needs no special permission; the other tools (send a contract, track signatures, download the signed PDF) need an eContract account.
+Setup for each client: [contractlayer/contractlayer → mcp](https://github.com/contractlayer/contractlayer/tree/main/mcp). Connecting to the MCP server needs a free eContract account; `verify_pdf` itself needs no extra permission scope. The plain HTTP API above needs no account at all.
 
 **Use cases for AI agents:**
 - Contract review automation — verify before analyzing content
